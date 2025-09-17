@@ -120,7 +120,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-5 w-5" />View All Projects and OpenSource Contribution on GitHub
+              <Github className="h-5 w-5" />View All Projects GitHub
             </a>
 
           </Button>
