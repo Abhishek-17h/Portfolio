@@ -11,28 +11,31 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-secondary/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-secondary/15 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-20 left-6 sm:left-10 w-12 sm:w-20 h-12 sm:h-20 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-32 sm:top-40 right-8 sm:right-20 w-10 sm:w-16 h-10 sm:h-16 bg-secondary/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 sm:bottom-40 left-10 sm:left-20 w-8 sm:w-12 h-8 sm:h-12 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-16 sm:bottom-20 right-6 sm:right-10 w-16 sm:w-24 h-16 sm:h-24 bg-secondary/15 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
       </div>
 
-      <div className="container-width section-padding">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left animate-slide-in-left">
             <div className="mb-6">
               <p className="text-secondary font-medium mb-2">Hello, I'm</p>
-              <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
                 <span className="text-gradient">Bhanudas Hegaje</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-6">
                 Full Stack Web Developer
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Passionate about creating innovative solutions through code.
                 Specializing in Full-Stack Development and Modern Web technologies.
               </p>
@@ -42,7 +45,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 onClick={() => scrollToSection('#projects')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 glow animate-glow-pulse"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 glow animate-glow-pulse w-full sm:w-auto"
                 size="lg"
               >
                 View My Work
@@ -50,7 +53,7 @@ const Hero = () => {
               <Button
                 asChild
                 variant="outline"
-                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground w-full sm:w-auto"
                 size="lg"
               >
                 <a href="/resume.pdf" download>
@@ -76,7 +79,12 @@ const Hero = () => {
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-primary transition-colors"
+                asChild
+              >
                 <a
                   href="https://www.linkedin.com/in/bhanudas-hegaje/"
                   target="_blank"
@@ -85,7 +93,12 @@ const Hero = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-primary transition-colors"
+                asChild
+              >
                 <a
                   href="mailto:abhishekhegaje1702@gmail.com"
                   target="_blank"
@@ -94,23 +107,25 @@ const Hero = () => {
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
-
             </div>
           </div>
 
           {/* Profile Image */}
           <div className="flex-1 flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden glass glow hover:scale-105 transition-transform duration-300">
+              <div className="w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden glass glow hover:scale-105 transition-transform duration-300">
                 <img
                   src={profileImage}
-                  alt="Alex Chen"
+                  alt="Profile"
                   className="w-full h-full object-cover"
                 />
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -top-3 -right-3 w-6 sm:w-8 h-6 sm:h-8 bg-primary rounded-full animate-pulse"></div>
+              <div
+                className="absolute -bottom-3 -left-3 w-5 sm:w-6 h-5 sm:h-6 bg-secondary rounded-full animate-pulse"
+                style={{ animationDelay: '1s' }}
+              ></div>
             </div>
           </div>
         </div>
