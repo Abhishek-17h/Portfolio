@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "Websy - AI-Powered SaaS Website Builder",
       description:
-        "A full-stack SaaS platform that leverages AI agents to generate, customise, and deploy fully functional websites within minutes using automated workflows and the OpenAI API.",
+        "A full-stack SaaS platform that leverages AI agents to generate and customisefully functional websites within minutes using automated workflows and the OpenAI API.",
       image: project2,
       technologies: [
         "Next.js",
