@@ -1,20 +1,50 @@
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
-import project1 from '@/assets/project1.png';
-
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import project1 from "@/assets/project1.png";
+import project2 from "@/assets/project2.png"
 
 const Projects = () => {
   const projects = [
     {
+      title: "Websy - AI-Powered SaaS Website Builder",
+      description:
+        "A full-stack SaaS platform that leverages AI agents to generate, customise, and deploy fully functional websites within minutes using automated workflows and the OpenAI API.",
+      image: project2,
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "tRPC",
+        "PostgreSQL",
+        "Prisma",
+        "Inngest",
+        "Tailwind CSS",
+        "Clerk",
+        "OpenAI API",
+        "AI Agents",
+      ],
+      liveUrl: "https://websy-42gq.vercel.app/",
+      githubUrl: "https://github.com/Abhishek-17h/Websy",
+      featured: true,
+    },
+    {
       title: "NextRole - Job Portal Website",
-      description: "A comprehensive full-stack platform for job posting, application tracking, and recruiter-candidate interaction with role-based access.",
+      description:
+        "A comprehensive full-stack platform for job posting, application tracking, and recruiter-candidate interaction with role-based access.",
       image: project1,
-      technologies: ["React", "Tailwind", "Javascript", "Superbase", "Clerk", "ShadCN"],
+      technologies: [
+        "React",
+        "Tailwind",
+        "Javascript",
+        "Superbase",
+        "Clerk",
+        "ShadCN",
+      ],
       liveUrl: "https://next-role-xi.vercel.app/",
       githubUrl: "https://github.com/Abhishek-17h/NextRole",
-      featured: true
-    }
+      featured: true,
+    },
   ];
 
   return (
@@ -25,7 +55,8 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for development
+            Here are some of my recent projects that showcase my skills and
+            passion for development
           </p>
         </div>
 
@@ -33,12 +64,17 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`glass overflow-hidden hover-float animate-fade-in ${project.featured ? 'md:grid md:grid-cols-2' : ''
-                }`}
+              className={`glass overflow-hidden hover-float animate-fade-in ${
+                project.featured ? "md:grid md:grid-cols-2" : ""
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className={`relative overflow-hidden ${project.featured ? '' : 'h-48'}`}>
+              <div
+                className={`relative overflow-hidden ${
+                  project.featured ? "" : "h-48"
+                }`}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -50,8 +86,12 @@ const Projects = () => {
               {/* Project Content */}
               <div className="p-6 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 text-gradient">{project.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                  <h3 className="text-2xl font-bold mb-2 text-gradient">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
 
                 {/* Technologies */}
@@ -100,15 +140,19 @@ const Projects = () => {
                     </a>
                   </Button>
                 </div>
-
               </div>
             </Card>
           ))}
         </div>
 
         {/* More Projects CTA */}
-        <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <p className="text-muted-foreground mb-6">Want to see more of my work?</p>
+        <div
+          className="text-center mt-12 animate-fade-in"
+          style={{ animationDelay: "0.3s" }}
+        >
+          <p className="text-muted-foreground mb-6">
+            Want to see more of my work?
+          </p>
           <Button
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
@@ -120,9 +164,9 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-5 w-5" />View All Projects GitHub
+              <Github className="h-5 w-5" />
+              View All Projects GitHub
             </a>
-
           </Button>
         </div>
       </div>
